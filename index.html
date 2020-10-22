@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -79,7 +79,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="numberofguests" class="col-md-2 col-form-label">Number of Guests</label>
+                            <label class="col-md-2 col-form-label">Section</label>
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-success active ml-3"><input type="radio" name="options" id="option1" autocomplete="off" checked> Non Smoking</label>
                                 <label class="btn btn-danger"><input type="radio" name="options" id="option2" autocomplete="off"> Smoking</label>
@@ -155,8 +155,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-md-3 align-self-centre">
-                    <a data-toggle="modal" data-target="#reserveModal">
-                    <button class="btn btn-block bg-warning">Reserve Table</button>
+                    <a>
+                    <button id="reserveButton" class="btn btn-block bg-warning">Reserve Table</button>
                     </a>
                 </div>
             </div>
@@ -273,6 +273,14 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
                 
+            });
+
+            $('#reserveButton').click(function(){
+                $('#reserveModal').modal('toggle');
+            });
+
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('toggle');
             });
         });
     </script>
